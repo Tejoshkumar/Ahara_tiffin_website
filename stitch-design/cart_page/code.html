@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Ahara Plate | Ahara Heritage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#d0e9d4",
+                      "on-primary-fixed": "#0b2013",
+                      "on-tertiary-fixed-variant": "#5a4134",
+                      "surface-variant": "#e6e2d8",
+                      "inverse-on-surface": "#f4f0e7",
+                      "surface-container-low": "#f7f3e9",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed": "#2a170c",
+                      "surface-container": "#f1eee4",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#1c1c16",
+                      "primary": "#061b0e",
+                      "on-secondary-fixed": "#261900",
+                      "tertiary-fixed": "#ffdbca",
+                      "on-error": "#ffffff",
+                      "surface-container-high": "#ece8de",
+                      "secondary-fixed": "#ffdea5",
+                      "background": "#fdf9ef",
+                      "surface-tint": "#4d6453",
+                      "on-surface-variant": "#434843",
+                      "inverse-surface": "#31312a",
+                      "outline": "#737973",
+                      "outline-variant": "#c3c8c1",
+                      "surface-container-highest": "#e6e2d8",
+                      "error": "#ba1a1a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#ac8c7b",
+                      "primary-container": "#1b3022",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#fed488",
+                      "inverse-primary": "#b4cdb8",
+                      "tertiary-fixed-dim": "#e3bfad",
+                      "on-primary-fixed-variant": "#364c3c",
+                      "on-primary-container": "#819986",
+                      "secondary-fixed-dim": "#e9c176",
+                      "surface-dim": "#dddad0",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "primary-fixed-dim": "#b4cdb8",
+                      "on-secondary-container": "#785a1a",
+                      "tertiary": "#251207",
+                      "on-background": "#1c1c16",
+                      "surface": "#fdf9ef",
+                      "on-secondary": "#ffffff",
+                      "secondary": "#775a19",
+                      "surface-bright": "#fdf9ef",
+                      "tertiary-container": "#3c261a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Playfair Display"],
+                      "body-md": ["Manrope"],
+                      "label-caps": ["Manrope"],
+                      "headline-lg": ["Playfair Display"],
+                      "body-lg": ["Manrope"],
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "display-lg": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fdf9ef;
+            color: #251207; /* Coffee Brown */
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kolam-bg {
+            background-image: radial-gradient(#775a19 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+        .brass-border {
+            border-color: rgba(119, 90, 25, 0.2);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1eee4;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #775a19;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<span class="font-headline-md text-headline-md text-primary tracking-tight">AHARA</span>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Experience</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Specials</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Menu</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Daily Meals</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 hover:scale-95 duration-150 ease-in-out">
+<span class="material-symbols-outlined text-primary">search</span>
+</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold text-label-caps tracking-widest flex items-center gap-2 hover:bg-primary/90 transition-all">
+                    YOUR PLATE
+                    <span class="bg-secondary text-on-secondary px-1.5 py-0.5 rounded-full text-[10px]">2</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
+<!-- Background Texture -->
+<div class="fixed inset-0 kolam-bg pointer-events-none"></div>
+<header class="mb-12 relative">
+<h1 class="font-headline-lg text-headline-lg md:text-display-lg text-primary mb-2">Your Ahara Plate</h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl">Review your freshly prepared selections before placing your order.</p>
+<div class="mt-6 flex items-center gap-4 text-secondary font-medium">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="text-label-caps">PREPARED FRESH AFTER EVERY ORDER</span>
+</div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter relative">
+<!-- Left Column: Cart Items -->
+<div class="lg:col-span-7 space-y-gutter">
+<!-- Item Card 1: Ghee Podi Dosa -->
+<div class="group bg-surface-container-lowest border brass-border p-6 rounded-[24px] flex flex-col md:flex-row gap-6 hover:shadow-xl hover:shadow-secondary/5 transition-all duration-500">
+<div class="w-full md:w-40 h-40 flex-shrink-0 overflow-hidden rounded-[16px]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A premium close-up of a golden brown, crispy Ghee Podi Dosa served on a fresh green banana leaf. The dosa has a visible dusting of aromatic red lentil spice powder. Beside it sit traditional brass bowls of white coconut chutney and red tomato chutney. The lighting is warm and dramatic, highlighting the texture of the crisp edges and the rich steam rising from the dish in a high-end hospitality setting." src="https://lh3.googleusercontent.com/aida/AP1WRLusmzsN7vN8eCn-74zDaA122s562moVtgMKc05JuZQvLbtz50dIFtfET3Qi-hrnLmAk_P_7XXffT8zxrlXTXcqBvEawdg49q8xbbf1FwSdh2G1saIH3HVwhQkbBpIhVBl-zlD-_8MyRc0wopGudLw9j8FW9i5vTR9YJ89w7ho1clRGQ01OQJyBkR6EYwpVL6rtwIwma--ODINI8g6IrSZ0C5PXSf08HgGuaXr7PFvN40bAjqP6qrUU03IMY"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-primary">Ghee Podi Dosa</h3>
+<span class="font-headline-md text-secondary">₹185</span>
+</div>
+<p class="text-on-surface-variant mt-2 leading-relaxed">Golden crispy dosa infused with aromatic ghee and spiced lentil powder.</p>
+<div class="flex items-center gap-2 mt-3">
+<span class="bg-primary-fixed text-on-primary-fixed text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Chef's Special</span>
+<span class="bg-surface-variant text-on-surface-variant text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Gluten Free</span>
+</div>
+</div>
+<div class="flex justify-between items-center mt-6 pt-4 border-t border-outline-variant/30">
+<div class="flex items-center bg-surface-container rounded-full px-2 py-1">
+<button class="w-8 h-8 flex items-center justify-center hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-4 font-bold text-primary">1</span>
+<button class="w-8 h-8 flex items-center justify-center hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-on-surface-variant hover:text-error flex items-center gap-1 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-base">delete</span>
+                                Remove
+                            </button>
+</div>
+</div>
+</div>
+<!-- Item Card 2: Filter Coffee -->
+<div class="group bg-surface-container-lowest border brass-border p-6 rounded-[24px] flex flex-col md:flex-row gap-6 hover:shadow-xl hover:shadow-secondary/5 transition-all duration-500">
+<div class="w-full md:w-40 h-40 flex-shrink-0 overflow-hidden rounded-[16px] bg-primary/5 flex items-center justify-center">
+<div class="w-full h-full" data-alt="A close-up shot of traditional South Indian filter coffee being served in a classic heavy brass davara and tumbler. The coffee has a rich, frothy top with a deep caramel brown color. The setting is a luxury restaurant with warm ambient lighting and soft heritage textures in the background. Cinematic lighting catches the steam and the polished brass surface." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAohkfLK8FzOEb5ETMB7BpG2FS786Rg_CxfOph-DylZM1BUwAQ4EeXT_HHNk8ADAc3ol6yT-bbwMUcFqGYq7Qekg4YMDomBEJQgkA0qeTEnIiP29mV8-jRfdf1Gm5a9JB_udT3_T4cO3200IuWVwB4Uj9kpEkljw1HXEoiJw6rCQ583Ych1o19Lhfb_xFAD0XbhxNEO205XMCKqHe9fy7FN309bF44GcCvqUVgNgi3Qgv7UlTj2G897X9KR48SzgEYm4ane-gEKfoVe')"></div>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-primary">Filter Coffee</h3>
+<span class="font-headline-md text-secondary">₹95</span>
+</div>
+<p class="text-on-surface-variant mt-2 leading-relaxed">Freshly decocted Arabica-Chicory blend frothed with full-cream milk in brass davara.</p>
+</div>
+<div class="flex justify-between items-center mt-6 pt-4 border-t border-outline-variant/30">
+<div class="flex items-center bg-surface-container rounded-full px-2 py-1">
+<button class="w-8 h-8 flex items-center justify-center hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-4 font-bold text-primary">1</span>
+<button class="w-8 h-8 flex items-center justify-center hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-on-surface-variant hover:text-error flex items-center gap-1 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-base">delete</span>
+                                Remove
+                            </button>
+</div>
+</div>
+</div>
+<!-- Special Instructions -->
+<div class="bg-surface-container-low p-8 rounded-[32px] border border-outline-variant/30 mt-12">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary">edit_note</span>
+<h4 class="font-headline-md text-primary text-xl">Special Instructions</h4>
+</div>
+<textarea class="w-full bg-surface-container-lowest border-outline-variant/50 border rounded-xl p-4 focus:ring-1 focus:ring-secondary focus:border-secondary transition-all outline-none text-body-md min-h-[120px] placeholder:text-on-surface-variant/40" placeholder="Extra chutney, less spicy..."></textarea>
+</div>
+</div>
+<!-- Right Column: Sidebar (Sticky) -->
+<div class="lg:col-span-5">
+<div class="sticky top-24 space-y-gutter">
+<!-- Customer Details -->
+<section class="bg-surface-container-high p-8 rounded-[32px] shadow-sm">
+<h3 class="font-headline-md text-primary mb-6">Customer Details</h3>
+<div class="space-y-5">
+<div>
+<label class="block text-label-caps text-on-surface-variant mb-2 ml-1">FULL NAME</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-secondary/20 transition-all outline-none" placeholder="Enter your name" type="text"/>
+</div>
+<div>
+<label class="block text-label-caps text-on-surface-variant mb-2 ml-1">PHONE NUMBER</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-secondary/20 transition-all outline-none" placeholder="+91 XXXXX XXXXX" type="tel"/>
+</div>
+<div class="pt-4">
+<label class="block text-label-caps text-on-surface-variant mb-4 ml-1">ORDER PREFERENCE</label>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-primary text-on-primary shadow-lg scale-[1.02] transition-all">
+<span class="material-symbols-outlined mb-2">restaurant</span>
+<span class="text-xs font-bold uppercase tracking-wider">Table Order</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl bg-surface-container-lowest text-on-surface-variant hover:bg-secondary/10 transition-all border border-outline-variant/30">
+<span class="material-symbols-outlined mb-2">local_mall</span>
+<span class="text-xs font-bold uppercase tracking-wider">Pickup</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Order Summary -->
+<section class="bg-primary text-on-primary p-8 rounded-[32px] shadow-2xl relative overflow-hidden">
+<!-- Decorative Texture -->
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]">pen_magic</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-secondary-fixed mb-6">Order Summary</h3>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between text-body-md opacity-80">
+<span>Subtotal (2 items)</span>
+<span>₹280.00</span>
+</div>
+<div class="flex justify-between text-body-md opacity-80">
+<span>Taxes (GST 5%)</span>
+<span>₹14.00</span>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-on-primary/20">
+<span class="font-headline-md text-xl">Grand Total</span>
+<span class="font-headline-md text-3xl text-secondary-fixed">₹294.00</span>
+</div>
+</div>
+<div class="bg-primary-container p-4 rounded-2xl mb-8 border border-on-primary/10">
+<div class="flex items-center gap-3 text-on-primary-container">
+<span class="material-symbols-outlined text-secondary-fixed">timer</span>
+<span class="text-sm font-medium">Freshly prepared in 15-20 minutes</span>
+</div>
+</div>
+<button class="w-full bg-secondary text-on-secondary py-5 rounded-full font-bold text-label-caps tracking-widest flex items-center justify-center gap-3 hover:bg-secondary/90 hover:scale-[1.02] active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined">chat</span>
+                                CONTINUE ORDER ON WHATSAPP
+                            </button>
+<p class="mt-6 text-center text-[10px] opacity-60 uppercase tracking-[0.2em]">Secure Checkout • Heritage Standard</p>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container py-16 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
+<div class="col-span-1 md:col-span-2">
+<span class="font-headline-md text-headline-md text-primary tracking-tight">AHARA</span>
+<p class="mt-4 text-on-surface-variant max-w-sm">Preserving the soul of South Indian culinary heritage through premium craftsmanship and authentic flavors.</p>
+</div>
+<div>
+<h4 class="font-bold text-label-caps mb-6 text-primary">QUICK LINKS</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Explore Menu</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Heritage Story</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Our Kitchen</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-label-caps mb-6 text-primary">POLICIES</h4>
+<ul class="space-y-3">
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-all" href="#">Ordering Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant text-sm opacity-80">© 2024 Ahara Heritage. Crafted with tradition.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-all">face_nod</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-all">photo_camera</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-all">alternate_email</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction Scripts -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Simple quantity toggle simulation
+            const quantityButtons = document.querySelectorAll('button');
+            quantityButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const icon = btn.querySelector('.material-symbols-outlined');
+                    if (icon && (icon.textContent === 'add' || icon.textContent === 'remove')) {
+                        // Just a visual feedback for the demo
+                        btn.classList.add('scale-90');
+                        setTimeout(() => btn.classList.remove('scale-90'), 150);
+                    }
+                });
+            });
+
+            // Intersection observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-4');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.group').forEach(el => {
+                el.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>

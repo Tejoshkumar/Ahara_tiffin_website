@@ -1,0 +1,322 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Flavours of Ahara | Ahara Tiffins</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#434843",
+                        "error-container": "#ffdad6",
+                        "surface": "#fdf9ef",
+                        "on-secondary-container": "#785a1a",
+                        "secondary": "#775a19",
+                        "primary-container": "#1b3022",
+                        "on-surface": "#1c1c16",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5a4134",
+                        "inverse-on-surface": "#f4f0e7",
+                        "tertiary": "#251207",
+                        "primary": "#061b0e",
+                        "tertiary-container": "#3c261a",
+                        "surface-tint": "#4d6453",
+                        "on-tertiary-fixed": "#2a170c",
+                        "inverse-primary": "#b4cdb8",
+                        "outline": "#737973",
+                        "on-secondary-fixed": "#261900",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "secondary-fixed-dim": "#e9c176",
+                        "primary-fixed-dim": "#b4cdb8",
+                        "on-tertiary-container": "#ac8c7b",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f7f3e9",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#f1eee4",
+                        "surface-container-high": "#ece8de",
+                        "inverse-surface": "#31312a",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffdbca",
+                        "background": "#fdf9ef",
+                        "surface-container-highest": "#e6e2d8",
+                        "on-primary-container": "#819986",
+                        "surface-variant": "#e6e2d8",
+                        "on-primary-fixed": "#0b2013",
+                        "on-background": "#1c1c16",
+                        "outline-variant": "#c3c8c1",
+                        "surface-bright": "#fdf9ef",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d0e9d4",
+                        "tertiary-fixed-dim": "#e3bfad",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#fed488",
+                        "surface-dim": "#dddad0",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#364c3c",
+                        "secondary-fixed": "#ffdea5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            border-bottom: 2px solid #785a1a;
+            color: #785a1a;
+        }
+        .cart-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        .glass-panel {
+            background: rgba(253, 249, 239, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar (Shared Component Logic) -->
+<header class="sticky top-0 z-50 w-full bg-surface-container border-b border-outline-variant px-6 md:px-16 py-4 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-primary">Ahara Tiffins</h1>
+</div>
+<nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+<a class="hover:text-secondary transition-colors" href="#">Menu</a>
+<a class="hover:text-secondary transition-colors" href="#">About Us</a>
+<a class="hover:text-secondary transition-colors" href="#">Daily Meals</a>
+
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden sm:flex items-center bg-surface-container-high rounded-full px-4 py-2 border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm p-0 w-32 md:w-48" placeholder="Search menu..." type="text">
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide hover:opacity-90 transition-opacity">
+                Order Now
+            </button>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 md:px-16 py-12">
+<!-- Hero Section -->
+<section class="text-center mb-16">
+<h1 class="font-display-lg text-headline-lg md:text-display-lg text-primary mb-4">Flavours of Ahara</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto italic">
+                "Freshly prepared South Indian classics served with authentic traditional taste."
+            </p>
+</section>
+<!-- Category Navigation -->
+<nav class="flex overflow-x-auto gap-8 border-b border-outline-variant mb-12 no-scrollbar">
+<a class="pb-4 text-sm font-bold whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity" href="#">Morning Classics</a>
+<a class="pb-4 text-sm font-bold whitespace-nowrap active-tab" href="#">Dosa Varieties</a>
+<a class="pb-4 text-sm font-bold whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity" href="#">Idli Specials</a>
+<a class="pb-4 text-sm font-bold whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity" href="#">Ahara Specials</a>
+<a class="pb-4 text-sm font-bold whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity" href="#">Evening Delights</a>
+<a class="pb-4 text-sm font-bold whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity" href="#">Beverages</a>
+</nav>
+<!-- Menu Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+<!-- Card 1 -->
+<div class="group bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/30 cart-shadow transition-transform hover:-translate-y-1">
+<div class="aspect-square w-full relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A macro photography shot of a perfectly golden, crispy Ghee Podi Dosa served on a fresh green banana leaf. The dosa is dusted with vibrant red-orange spiced lentil powder and glistening with melted aromatic ghee. Soft morning sunlight streams through a window, highlighting the porous texture of the crepe. The background is a clean, upscale South Indian restaurant setting with warm wood tones and brass accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDabfcKintViV9v54jyPoulHXRxkaL4DyQZZRhoMUg9CURBpnuFF4cSusw9ZQNAhYdK3tdZvqR3Z6rFt3bXFToW7ekJPkuXKHQq9fMQD8FvhNrp3bOYcj_Rjl9NDRwOFgy6Aqhd1jETKXCW30N2Ii0jnlt-X3HXVUCnNIQjgYlQhm39i1URQHEU12QZAiqmdIvOfskKNGUHMjGvsbZL31MsMPTdAAobHym6n3CzuNebtXMGT1Oxe8cI_I5qf5kZg8XkBJIGWyJbsW5F')"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Signature Dish</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-xl text-primary mb-2">Ghee Podi Dosa</h3>
+<p class="text-tertiary-container text-sm leading-relaxed mb-4">Golden crispy dosa infused with aromatic ghee and spiced lentil powder.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-secondary font-bold text-lg">₹185</span>
+<button class="bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-lg text-sm font-bold hover:bg-primary hover:text-on-primary transition-colors">Add</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/30 cart-shadow transition-transform hover:-translate-y-1"><div class="aspect-square w-full relative overflow-hidden"><div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&amp;w=800&amp;auto=format&amp;fit=crop')"></div><div class="absolute top-4 left-4"><span class="bg-secondary text-on-secondary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Customer Favourite</span></div></div><div class="p-6"><h3 class="font-headline-md text-xl text-primary mb-2">Ghee Podi Idli</h3><p class="text-tertiary-container text-sm leading-relaxed mb-4">Soft button idlis tossed in aromatic spice powder and pure cow ghee.</p><div class="flex justify-between items-center mt-auto"><span class="text-secondary font-bold text-lg">₹155</span><button class="bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-lg text-sm font-bold hover:bg-primary hover:text-on-primary transition-colors">Add</button></div></div></div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/30 cart-shadow transition-transform hover:-translate-y-1">
+<div class="aspect-square w-full relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Authentic South Indian filter coffee being poured from a height into a traditional brass davara and tumbler set. The coffee is topped with a thick, velvety layer of frothy foam. Steam rises gracefully in a sunlit, minimalist kitchen setting with a soft beige background. The scene conveys a sense of morning ritual and rich heritage coffee culture in a high-end hospitality environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCG2nOOpBBI3ssKYXplONQoMJMYxJGsaX3sitcEYX_6c-Im3Hpmaafbi2ktZ7lieeowuv_N6hvGwAfZAc627P3n5v4kUuECncnTrsIjjg8ioc-VgVsSsSBb4mRO_1FXCsbyn2QIKzXICyFvSKqRvgLI3aiGkTvx4rOFJh6IAMf8HGwK3jzrin4B6HtD6SW-xLcNqLZIY8wL3miDOFCqQzMLwTEhZFSSH28FkMobPqR9xjUdegoAGFjbhw6yjhyqZfsLZvvZ2PZ4sGt')"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-on-tertiary-container text-tertiary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Most Ordered</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-xl text-primary mb-2">Filter Coffee</h3>
+<p class="text-tertiary-container text-sm leading-relaxed mb-4">Freshly decocted Arabica-Chicory blend frothed with full-cream milk in brass davara.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-secondary font-bold text-lg">₹95</span>
+<button class="bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-lg text-sm font-bold hover:bg-primary hover:text-on-primary transition-colors">Add</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/30 cart-shadow transition-transform hover:-translate-y-1">
+<div class="aspect-square w-full relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Two pillowy, snow-white steamed idlis partially submerged in a bowl of deep orange-red, aromatic vegetable sambar. The sambar is garnished with fresh green coriander leaves and a drizzle of coconut oil. The bowl is a rustic ceramic dish resting on a textured linen tablecloth. The atmosphere is warm and comforting, suggesting a wholesome, luxury breakfast experience." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUynj9hnLjUwiLzNAs2ZEKGYK5X6Awe6ulZI2igtK3yvDbchPXfGmOM5ErjZ2l1GapfDaaFSfc8SWeQcuSOyIpGxGv9JEPIyXK1hKNIjoJyydqPgFfeOu2ybXkgF77F8EhW059-IxdJniFu1NuMte2NN8_vcTJy47jnEcv3xBzFl3SW_7cPICNASxczSM84yGSca_T2mWBOdQqc9p-rV4vLGHfROgU1LAo-gzM0855vONdruckFaCyGEt26OeMwtujGxXVmm1YqqEp')"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-xl text-primary mb-2">Sambar Idli</h3>
+<p class="text-tertiary-container text-sm leading-relaxed mb-4">Pillowy steamed rice cakes submerged in our signature aromatic vegetable sambar.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-secondary font-bold text-lg">₹145</span>
+<button class="bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-lg text-sm font-bold hover:bg-primary hover:text-on-primary transition-colors">Add</button>
+</div>
+</div>
+</div>
+<div class="group bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/30 cart-shadow transition-transform hover:-translate-y-1"><div class="aspect-square w-full relative overflow-hidden"><div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1630383249896-424e482df921?q=80&amp;w=800&amp;auto=format&amp;fit=crop')"></div></div><div class="p-6"><h3 class="font-headline-md text-xl text-primary mb-2">Rava Masala Dosa</h3><p class="text-tertiary-container text-sm leading-relaxed mb-4">Crispy semolina crepe filled with spiced potato masala and tempered onions.</p><div class="flex justify-between items-center mt-auto"><span class="text-secondary font-bold text-lg">₹195</span><button class="bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-lg text-sm font-bold hover:bg-primary hover:text-on-primary transition-colors">Add</button></div></div></div><div class="group bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/30 cart-shadow transition-transform hover:-translate-y-1"><div class="aspect-square w-full relative overflow-hidden"><div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?q=80&amp;w=800&amp;auto=format&amp;fit=crop')"></div><div class="absolute top-4 left-4"><span class="bg-on-tertiary-container text-tertiary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Most Ordered</span></div></div><div class="p-6"><h3 class="font-headline-md text-xl text-primary mb-2">Medu Vada (2 pcs)</h3><p class="text-tertiary-container text-sm leading-relaxed mb-4">Golden brown, crispy lentil doughnuts served with traditional sambar and coconut chutney.</p><div class="flex justify-between items-center mt-auto"><span class="text-secondary font-bold text-lg">₹125</span><button class="bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-lg text-sm font-bold hover:bg-primary hover:text-on-primary transition-colors">Add</button></div></div></div></div>
+</main>
+<!-- Side Panel / Cart Selection (Visible by Default for this view) -->
+<aside class="fixed top-0 right-0 h-full w-full md:w-96 glass-panel border-l border-outline-variant z-[60] transform transition-transform duration-300 translate-x-0 flex flex-col hidden lg:flex" id="cart-panel">
+<div class="p-8 border-b border-outline-variant flex items-center justify-between">
+<h2 class="font-headline-md text-2xl text-primary">Your Selection</h2>
+<button class="lg:hidden text-on-surface-variant" onclick="toggleCart()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-8 space-y-6">
+<!-- Cart Item 1 -->
+<div class="flex items-start justify-between">
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" data-alt="A close up thumbnail of a crispy South Indian dosa." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDg6ZjQtL1Rb4cZ5gv8-1MdGXVfCofvK_J_6QTp6R9NGtfQKPZukHOp7X-PNfsGtHg_0fMsI4upCqzXmni-N19kOuRGtv-yTe8swYM9PnC93zzGZMskEtgbM0358PBdNQv8NN-ds_VbIICK0m4HaPR0dquejCAhEtds1oaNzqDr00iDSUskhV6-QLavy8cU9QhyCeIf9VhXFa6pZlVqOwfj1M57bf9drlhEiR9aHVZ7IXm-WCc-I4TksMIjmjG4bDMV-XqRR0OvMbh9')"></div>
+<div>
+<h4 class="font-bold text-primary">Ghee Podi Dosa</h4>
+<p class="text-sm text-secondary font-semibold">₹185</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-highest rounded-full px-3 py-1">
+<button class="text-primary hover:text-secondary"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="font-bold text-sm">1</span>
+<button class="text-primary hover:text-secondary"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="flex items-start justify-between">
+<div class="flex gap-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" data-alt="A close up thumbnail of frothy South Indian filter coffee in a brass cup." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4oH3PJX_c-E3e4b_p3m5YAF8zTlM6Z4KWHjdXTY32gxmwf7UvaZH-Rd58VXt_oxeCrMZP7hlBfEB9VpKgyGOFf5DeTYNVvVvta1fcMRdmXa1lsKDEdPWur-FToReAE8IURrbYS_pwgbzZJUHgkackGulYyVlKf8YLkhPbpTQWov2pnGI2EKtQ0-gWxjwJpDLPmFL8LxrspZ51L8FJlh3d7d0mGzGwrJQe4cPY-gXoDyKhSt4rD4K3S8aqb7zg9iQ0XSlIKz_zNEi2')"></div>
+<div>
+<h4 class="font-bold text-primary">Filter Coffee</h4>
+<p class="text-sm text-secondary font-semibold">₹95</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-highest rounded-full px-3 py-1">
+<button class="text-primary hover:text-secondary"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="font-bold text-sm">1</span>
+<button class="text-primary hover:text-secondary"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+</div>
+<div class="p-8 bg-surface-container-high space-y-6">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-medium">Subtotal</span>
+<span class="font-bold text-primary">₹280</span>
+</div>
+<div class="flex justify-between items-center text-sm opacity-60">
+<span class="">Taxes &amp; Charges</span>
+<span class="">Calculated at checkout</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold tracking-wide hover:opacity-90 transition-all flex items-center justify-center gap-2">
+                Continue Order
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</aside>
+<!-- Floating Cart Button (For Mobile/Small Screens) -->
+<button class="fixed bottom-8 right-8 lg:hidden bg-secondary text-on-secondary p-4 rounded-full cart-shadow z-50 flex items-center justify-center" onclick="toggleCart()">
+<span class="material-symbols-outlined">shopping_basket</span>
+<span class="absolute -top-2 -right-2 bg-error text-white text-[10px] w-6 h-6 flex items-center justify-center rounded-full font-bold">2</span>
+</button>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary py-16 px-6 md:px-16 lg:mr-96">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="white"></path>
+</svg>
+</div>
+<h2 class="text-2xl font-bold tracking-tight">Ahara Tiffins</h2>
+</div>
+<p class="opacity-70 max-w-sm mb-8 leading-relaxed">
+                    Preserving the soul of South Indian breakfast culture through authentic recipes and premium hospitality. Every dish is a journey back to the roots.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined">location_on</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 uppercase text-xs tracking-[0.2em] opacity-50">Explore</h4>
+<ul class="space-y-4 text-sm font-medium">
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Digital Menu</a></li>
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Heritage Story</a></li>
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Daily Meals</a></li>
+
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 uppercase text-xs tracking-[0.2em] opacity-50">Support</h4>
+<ul class="space-y-4 text-sm font-medium">
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Contact Us</a></li>
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Bulk Orders</a></li>
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Feedback</a></li>
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white/10 text-center text-xs opacity-40 font-medium">
+            © 2024 Ahara Tiffins. All rights reserved. Crafting authentic experiences.
+        </div>
+</footer>
+<script>
+        function toggleCart() {
+            const panel = document.getElementById('cart-panel');
+            panel.classList.toggle('hidden');
+            panel.classList.toggle('flex');
+            // Logic to prevent body scroll on mobile
+            if (!panel.classList.contains('hidden') && window.innerWidth < 1024) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+
+
+
+
+</body></html>
