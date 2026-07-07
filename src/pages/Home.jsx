@@ -8,6 +8,8 @@ import ahara2 from "../../ahara_image_2.jpeg";
 import ahara3 from "../../ahara_image_3.jpeg";
 import ahara4 from "../../ahara_image_4.jpeg";
 import Reveal from "../components/Reveal";
+import heroFood from "../../ahara_hero_food.png";
+
 
 const galleryImages = [
   ahara1,
@@ -82,9 +84,9 @@ export default function Home({ setCurrentPage }) {
             <div className="relative w-full max-w-4xl mx-auto">
               <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-t-full overflow-hidden shadow-2xl border-x-8 border-t-8 border-surface-container-high animate-float">
                 <img
-                  alt="Luxury South Indian Food"
+                  alt="Premium South Indian breakfast with idli dosa vada chutney and sambar"
                   className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida/AP1WRLusmzsN7vN8eCn-74zDaA122s562moVtgMKc05JuZQvLbtz50dIFtfET3Qi-hrnLmAk_P_7XXffT8zxrlXTXcqBvEawdg49q8xbbf1FwSdh2G1saIH3HVwhQkbBpIhVBl-zlD-_8MyRc0wopGudLw9j8FW9i5vTR9YJ89w7ho1clRGQ01OQJyBkR6EYwpVL6rtwIwma--ODINI8g6IrSZ0C5PXSf08HgGuaXr7PFvN40bAjqP6qrUU03IMY"
+                  src={heroFood}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none"></div>
               </div>
